@@ -25,6 +25,16 @@ head=f'''<!doctype html>
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Gastô">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gastô">
+<meta property="og:title" content="Gastô · Seu cartão sob controle">
+<meta property="og:description" content="Gastos do cartão da família, metas por categoria e faturas num só lugar. Instale no celular e use com quem divide o cartão com você.">
+<meta property="og:url" content="https://kauegasto.github.io/gasto/">
+<meta property="og:image" content="https://kauegasto.github.io/gasto/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -46,6 +56,7 @@ man={"name":"Gastô","short_name":"Gastô","description":"Controle dos gastos do
           {"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]}
 open(os.path.join(OUT,'manifest.json'),'w').write(json.dumps(man,ensure_ascii=False,indent=1))
 im=Image.open(os.path.join(ROOT,'icone-1024.png')).convert('RGB')
+shutil.copy(os.path.join(ROOT,'og-image.png'),os.path.join(OUT,'og-image.png'))
 for n,s in [('icon-192.png',192),('icon-512.png',512),('apple-touch-icon.png',180)]: im.resize((s,s),Image.LANCZOS).save(os.path.join(OUT,n),optimize=True)
 sw='''// Gastô __VER__: guarda o app no celular para abrir rápido e funcionar sem internet.
 const C="gasto-__VER__";
