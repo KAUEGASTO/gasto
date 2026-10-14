@@ -29,8 +29,8 @@ head=f'''<!doctype html>
 <meta property="og:site_name" content="Gastô">
 <meta property="og:title" content="Gastô · Seu cartão sob controle">
 <meta property="og:description" content="Gastos do cartão da família, metas por categoria e faturas num só lugar. Instale no celular e use com quem divide o cartão com você.">
-<meta property="og:url" content="https://kauegasto.github.io/gasto/">
-<meta property="og:image" content="https://kauegasto.github.io/gasto/og-image.png">
+<meta property="og:url" content="https://gastoapp.github.io/">
+<meta property="og:image" content="https://gastoapp.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="pt_BR">

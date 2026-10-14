@@ -2,7 +2,7 @@
 
 Controle dos gastos do cartão de crédito da família.
 
-- **App:** https://kauegasto.github.io/gasto/
+- **App:** https://gastoapp.github.io/
 - **No iPhone:** abra no Safari → Compartilhar → *Adicionar à Tela de Início*.
 - **No Android:** abra no Chrome → ⋮ → *Instalar app*.
 
