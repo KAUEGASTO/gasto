@@ -409,6 +409,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .inc.neutral{color:var(--muted);background:var(--surface2)}
 @media (max-width:380px){.catrow{grid-template-columns:auto minmax(0,1fr) minmax(0,108px) auto}.total .v{font-size:32px}.seg button{padding:6px 9px}}
 @media (prefers-reduced-motion:no-preference){.sheet{animation:up .22s ease-out}@keyframes up{from{transform:translateY(30px);opacity:.6}}}
+.srchbtn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;font-size:13px;min-height:0;width:auto}.srchbtn svg{width:16px;height:16px}
 </style>
 
 </head>
@@ -426,7 +427,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
   ["gesturestart","gesturechange","gestureend"].forEach(ev=>document.addEventListener(ev,e=>e.preventDefault(),{passive:false}));
   document.addEventListener("touchmove",e=>{if(e.touches&&e.touches.length>1)e.preventDefault()},{passive:false});
 })();
-const APP_VERSION = "5.29";
+const APP_VERSION = "5.30";
 const LOGO_SRC = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJsayIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzM0MzYzZCIvPjxzdG9wIG9mZnNldD0iLjQ1IiBzdG9wLWNvbG9yPSIjMTUxNjFhIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDUwNTA2Ii8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImdvbGQiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmNmUzYTgiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjY2ZhODUwIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOGU2YTI0Ii8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImJnRzEiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9Ii4xMiIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzEyYjVhMiIvPjwvbGluZWFyR3JhZGllbnQ+PGNsaXBQYXRoIGlkPSJpY29DbGlwIj48cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjI4Ii8+PC9jbGlwUGF0aD48L2RlZnM+CiAgICAgIDxnIGNsaXAtcGF0aD0idXJsKCNpY29DbGlwKSI+CiAgICAgIDxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiBmaWxsPSJ1cmwoI2JnRzEpIi8+CiAgICAgIDxwYXRoIGQ9Ik00NSAxNC41IFE2MCA1IDc1IDE0LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdiNWNmZiIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgICAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MyIgcj0iMzciIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdiNWNmZiIgc3Ryb2tlLXdpZHRoPSIxMSIvPgogICAgICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSgtNSA2MCA2MykiPgogICAgICAgIDxyZWN0IHg9IjE0LjUiIHk9IjM0LjUiIHdpZHRoPSI5MSIgaGVpZ2h0PSI1NyIgcng9IjYuOCIgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIuMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS41IDMpIi8+CiAgICAgICAgPHJlY3QgeD0iMTQuNSIgeT0iMzQuNSIgd2lkdGg9IjkxIiBoZWlnaHQ9IjU3IiByeD0iNi44IiBmaWxsPSJ1cmwoI2JsaykiLz4KICAgICAgICA8cmVjdCB4PSIxNS4xIiB5PSIzNS4xIiB3aWR0aD0iODkuOCIgaGVpZ2h0PSI1NS44IiByeD0iNi4zIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMS4xIiBzdHJva2Utb3BhY2l0eT0iLjgiLz4KICAgICAgICA8cGF0aCBkPSJNMTQuNSA2OC43IEw1Mi43IDM0LjUgTDY1LjUgMzQuNSBMMjMuNiA5MS41IEwxNC41IDkxLjUgWiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIuMDYiLz4KICAgICAgICA8cmVjdCB4PSIyMi43IiB5PSI0OS4zIiB3aWR0aD0iMTMuNyIgaGVpZ2h0PSIxMS40IiByeD0iMi4yIiBmaWxsPSJ1cmwoI2dvbGQpIi8+CiAgICAgICAgPGcgZmlsbD0iI2Q5YmY3YSIgZmlsbC1vcGFjaXR5PSIuNyI+PGNpcmNsZSBjeD0iMjMuNiIgY3k9Ijc1LjUiIHI9IjEuNDUiLz48Y2lyY2xlIGN4PSIyNy43IiBjeT0iNzUuNSIgcj0iMS40NSIvPjxjaXJjbGUgY3g9IjMxLjgiIGN5PSI3NS41IiByPSIxLjQ1Ii8+PGNpcmNsZSBjeD0iMzUuOSIgY3k9Ijc1LjUiIHI9IjEuNDUiLz48Y2lyY2xlIGN4PSI0Mi43IiBjeT0iNzUuNSIgcj0iMS40NSIvPjxjaXJjbGUgY3g9IjQ2LjgiIGN5PSI3NS41IiByPSIxLjQ1Ii8+PGNpcmNsZSBjeD0iNTAuOSIgY3k9Ijc1LjUiIHI9IjEuNDUiLz48Y2lyY2xlIGN4PSI1NS4wIiBjeT0iNzUuNSIgcj0iMS40NSIvPjwvZz4KICAgICAgPC9nPgogICAgICA8Y2xpcFBhdGggaWQ9ImdGcm9udE4iPjxyZWN0IHg9IjYwIiB5PSIyNCIgd2lkdGg9IjYwIiBoZWlnaHQ9Ijc4Ii8+PC9jbGlwUGF0aD4KICAgICAgPGcgY2xpcC1wYXRoPSJ1cmwoI2dGcm9udE4pIj48Y2lyY2xlIGN4PSI2MCIgY3k9IjYzIiByPSIzNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2I1Y2ZmIiBzdHJva2Utd2lkdGg9IjExIi8+PC9nPgogICAgICAKICAgICAgPC9nPgogICAgPC9zdmc+";
 const WORDMARK_SRC = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00MCAtOTAgMjc5MiAxMDEwIj4KICA8ZGVmcz48bWFzayBpZD0iY3V0UyIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iLTIwMDAiIHk9Ii0yMDAwIiB3aWR0aD0iOTAwMCIgaGVpZ2h0PSI1MDAwIj48cmVjdCB4PSItMjAwMCIgeT0iLTIwMDAiIHdpZHRoPSI5MDAwIiBoZWlnaHQ9IjUwMDAiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMzc1LjYiIHk9IjM0NSIgd2lkdGg9IjQwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiMwMDAiLz48cmVjdCB4PSIxNDY1LjYiIHk9IjMxOCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiMwMDAiLz48L21hc2s+PGxpbmVhckdyYWRpZW50IGlkPSJ3bUciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCIgeTE9IjU2MCIgeDI9IjE5NTgiIHkyPSI4NjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEyYjVhMiIvPjxzdG9wIG9mZnNldD0iLjU1IiBzdG9wLWNvbG9yPSIjMmY1YmUwIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNWIzZmQ2Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+CiAgPGcgZmlsbD0iI2ZmZmZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCA4NjApIHNjYWxlKDEgLTEpIj48cGF0aCBkPSJNMzA0IC0xNFEyMjAgLTE0IDE1OC4wIDI4LjBROTYgNzAgNjMuMCAxNDYuNVEzMCAyMjMgMzAgMzI1UTMwIDQwMCA0OC41IDQ2My41UTY3IDUyNyAxMDYuMCA1NzQuNVExNDUgNjIyIDIwMy41IDY0OC4wUTI2MiA2NzQgMzQyIDY3NFE0MDggNjc0IDQ1Ny4wIDY1Ni4wUTUwNiA2MzggNTM4LjAgNjA1LjVRNTcwIDU3MyA1ODQuNSA1MjkuMFE1OTkgNDg1IDU5NiA0MzNMNDYwIDQxNlE0NjIgNDYzIDQ0Ny4wIDQ5My4wUTQzMiA1MjMgNDA0LjAgNTM4LjBRMzc2IDU1MyAzMzcgNTUzUTI5MSA1NTMgMjU2LjAgNTI4LjVRMjIxIDUwNCAyMDEuMCA0NTUuMFExODEgNDA2IDE4MSAzMzJRMTgxIDI3NiAxOTIuNSAyMzMuNVEyMDQgMTkxIDIyNi4wIDE2Mi41UTI0OCAxMzQgMjgwLjAgMTE5LjBRMzEyIDEwNCAzNTEgMTA0UTM5MyAxMDQgNDIyLjUgMTE5LjVRNDUyIDEzNSA0NjguMCAxNjMuMFE0ODQgMTkxIDQ4NSAyMjlIMzc1VjMzM0g2MTRWMjE0VjBINTEyTDUxNSAxODFINTA2UTUwMCAxMTggNDc1LjAgNzQuNVE0NTAgMzEgNDA3LjAgOC41UTM2NCAtMTQgMzA0IC0xNFoiLz48cGF0aCBkPSJNODAxLjMgLTE0UTc2MC4zIC0xNCA3MjQuOCAwLjVRNjg5LjMgMTUgNjY2LjggNDYuMFE2NDQuMyA3NyA2NDQuMyAxMjlRNjQ0LjMgMTc3IDY2Mi44IDIwNy41UTY4MS4zIDIzOCA3MTMuMyAyNTYuMFE3NDUuMyAyNzQgNzgzLjMgMjg0LjBRODIxLjMgMjk0IDg2MC4zIDMwMVE5MTMuMyAzMTEgOTM5LjggMzE2LjVROTY2LjMgMzIyIDk3NS4zIDMzMC41UTk4NC4zIDMzOSA5ODQuMyAzNTRROTg0LjMgMzg4IDk2MC4zIDQwNS41UTkzNi4zIDQyMyA4OTcuMyA0MjNRODc0LjMgNDIzIDg1MC4zIDQxNC41UTgyNi4zIDQwNiA4MTAuOCAzODQuMFE3OTUuMyAzNjIgNzk1LjMgMzIzTDY2Ni4zIDMzNFE2NjYuMyAzOTQgNjg2LjggNDMzLjVRNzA3LjMgNDczIDc0Mi4zIDQ5Ni4wUTc3Ny4zIDUxOSA4MTkuMyA1MjkuMFE4NjEuMyA1MzkgOTAyLjMgNTM5UTk3Ni4zIDUzOSAxMDI1LjggNTExLjVRMTA3NS4zIDQ4NCAxMTAwLjMgNDMxLjBRMTEyNS4zIDM3OCAxMTI1LjMgMzAxVjIwNlExMTI1LjMgMTcyIDExMjUuMyAxMzcuNVExMTI1LjMgMTAzIDExMjUuOCA2OC41UTExMjYuMyAzNCAxMTI2LjMgMEg5OTkuM1ExMDAwLjMgMzggMTAwMS4zIDc3LjBRMTAwMi4zIDExNiAxMDAyLjMgMTU4SDk5Ni4zUTk5MS4zIDExMSA5NjUuMyA3Mi4wUTkzOS4zIDMzIDg5Ny4zIDkuNVE4NTUuMyAtMTQgODAxLjMgLTE0Wk04NTcuMyA5M1E4NzcuMyA5MyA4OTkuOCAxMDEuNVE5MjIuMyAxMTAgOTQxLjMgMTI3LjVROTYwLjMgMTQ1IDk3Mi4zIDE3My41UTk4NC4zIDIwMiA5ODQuMyAyNDNMOTg1LjMgMjY2TDEwMTEuMyAyNzFRMTAwMy4zIDI1NyA5ODIuOCAyNDkuMFE5NjIuMyAyNDEgOTM3LjMgMjM2LjVROTEyLjMgMjMyIDg4Ni4zIDIyNy4wUTg2MC4zIDIyMiA4MzguMyAyMTQuMFE4MTYuMyAyMDYgODAyLjggMTkxLjVRNzg5LjMgMTc3IDc4OS4zIDE1MlE3ODkuMyAxMjQgODA4LjMgMTA4LjVRODI3LjMgOTMgODU3LjMgOTNaIi8+PHBhdGggZD0iTTEzOTguNiAtMTRRMTM0Ni42IC0xNCAxMzAyLjEgLTMuNVExMjU3LjYgNyAxMjI1LjEgMzAuMFExMTkyLjYgNTMgMTE3NS42IDkxLjVRMTE1OC42IDEzMCAxMTYxLjYgMTg0TDEyODcuNiAxOTZRMTI4OC42IDE1OSAxMzAyLjYgMTM1LjVRMTMxNi42IDExMiAxMzQyLjEgMTAxLjVRMTM2Ny42IDkxIDE0MDMuNiA5MVExNDQxLjYgOTEgMTQ2Ni42IDEwMy41UTE0OTEuNiAxMTYgMTQ5MS42IDE0NFExNDkxLjYgMTYxIDE0ODEuMSAxNzEuMFExNDcwLjYgMTgxIDE0NDYuNiAxODkuMFExNDIyLjYgMTk3IDEzODEuNiAyMDdRMTMzMy42IDIxOCAxMjkzLjYgMjMwLjVRMTI1My42IDI0MyAxMjI0LjYgMjYwLjVRMTE5NS42IDI3OCAxMTgwLjEgMzA0LjVRMTE2NC42IDMzMSAxMTY0LjYgMzcwUTExNjQuNiA0MjMgMTE5My4xIDQ2MC41UTEyMjEuNiA0OTggMTI3Mi4xIDUxOC41UTEzMjIuNiA1MzkgMTM4OC42IDUzOVExNDQ4LjYgNTM5IDE1MDAuMSA1MjAuMFExNTUxLjYgNTAxIDE1ODEuNiA0NTguNVExNjExLjYgNDE2IDE2MDQuNiAzNDZMMTQ4MC42IDMzNFExNDgzLjYgMzY2IDE0NzEuNiAzODguMFExNDU5LjYgNDEwIDE0MzYuMSA0MjEuNVExNDEyLjYgNDMzIDEzODAuNiA0MzNRMTM0Mi42IDQzMyAxMzIxLjEgNDE4LjVRMTI5OS42IDQwNCAxMjk5LjYgMzgxUTEyOTkuNiAzNjIgMTMxMy4xIDM1MC4wUTEzMjYuNiAzMzggMTM1Mi42IDMzMC41UTEzNzguNiAzMjMgMTQxOC42IDMxNFExNDUyLjYgMzA3IDE0ODkuMSAyOTYuNVExNTI1LjYgMjg2IDE1NTcuMSAyNjguNVExNTg4LjYgMjUxIDE2MDguMSAyMjEuNVExNjI3LjYgMTkyIDE2MjcuNiAxNDZRMTYyNy42IDk4IDE2MDEuMSA2MS41UTE1NzQuNiAyNSAxNTIzLjYgNS41UTE0NzIuNiAtMTQgMTM5OC42IC0xNFoiIG1hc2s9InVybCgjY3V0UykiLz48cGF0aCBkPSJNMTg2Mi44OTk5OTk5OTk5OTk5IC0xMVExNzc1Ljg5OTk5OTk5OTk5OTkgLTExIDE3MzIuMzk5OTk5OTk5OTk5OSAzNC4wUTE2ODguODk5OTk5OTk5OTk5OSA3OSAxNjg4Ljg5OTk5OTk5OTk5OTkgMTczVjQxMUgxNjI5Ljg5OTk5OTk5OTk5OTlWNTA1SDE2MzcuODk5OTk5OTk5OTk5OVExNjkyLjg5OTk5OTk5OTk5OTkgNTExIDE3MTYuMzk5OTk5OTk5OTk5OSA1NDAuNVExNzM5Ljg5OTk5OTk5OTk5OTkgNTcwIDE3NDQuODk5OTk5OTk5OTk5OSA2MzBMMTc0NS44OTk5OTk5OTk5OTk5IDY0M0gxODMxLjg5OTk5OTk5OTk5OTlWNTI1SDE5NTYuODk5OTk5OTk5OTk5OVY0MDhIMTgzMS44OTk5OTk5OTk5OTk5VjE4NlExODMxLjg5OTk5OTk5OTk5OTkgMTQ4IDE4NTAuMzk5OTk5OTk5OTk5OSAxMzEuMFExODY4Ljg5OTk5OTk5OTk5OTkgMTE0IDE4OTYuODk5OTk5OTk5OTk5OSAxMTRRMTkxMS44OTk5OTk5OTk5OTk5IDExNCAxOTI3LjM5OTk5OTk5OTk5OTkgMTE4LjVRMTk0Mi44OTk5OTk5OTk5OTk5IDEyMyAxOTU2Ljg5OTk5OTk5OTk5OTkgMTMxVjNRMTkyNy44OTk5OTk5OTk5OTk5IC01IDE5MDQuODk5OTk5OTk5OTk5OSAtOC4wUTE4ODEuODk5OTk5OTk5OTk5OSAtMTEgMTg2Mi44OTk5OTk5OTk5OTk5IC0xMVoiLz48cGF0aCBkPSJNMTM3My42IDUzOC44IEMxNDc1LjYgNTM4LjggMTU4Ny45IDUwNSAxNjYyLjkgNTA1IEwxNzEyLjkgNTA1IEwxNzEyLjkgNDExLjMgTDE2MzIuOSA0MTEuMyBDMTU3Ny45IDQxMS4zIDE0NjUuNiA0MzIuOSAxMzczLjYgNDMyLjkgWiIvPjwvZz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMDAzLjIgLTEwNS4wKSBzY2FsZSgxNC43NzYxKSB0cmFuc2xhdGUoLTYgLTEyKSI+CiAgICAgIDxwYXRoIGQ9Ik0xOCAyNSBRMzAgMTYgNDIgMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSI2LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgICA8Y2lyY2xlIGN4PSIzMCIgY3k9IjU1IiByPSIxOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjgiLz4KICAgICAgPGNpcmNsZSBjeD0iMzQuNSIgY3k9IjUwLjUiIHI9IjcuMiIgZmlsbD0iIzVjZjBkOCIvPjwvZz4KPC9zdmc+";
 const LS = "cartao-proto-v1";
@@ -597,7 +598,7 @@ const catOf = id => S.categories.find(c=>c.id===id) || {name:"Sem categoria",goa
 const sum = arr => r2(arr.reduce((s,x)=>s+x.value,0));
 
 /* ---------- render ---------- */
-const ICON={gear:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>',
+const ICON={search:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>',gear:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>',
   left:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>',
   right:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>',
   tag:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg>',
@@ -782,7 +783,8 @@ function render(){
     <div class="future">${fut}</div>
   </section></div>
   <div class="o6"><section class="card">
-    <div class="secthead"><h2>Todos os lançamentos</h2><span class="small">toque para ver, editar ou apagar</span></div>
+    <div class="secthead"><h2>Todos os lançamentos</h2><button class="btn srchbtn" id="btnSearch" aria-label="Procurar compra">${ICON.search}<span>Procurar</span></button></div>
+    <div class="small" style="margin-top:-6px">toque para ver, editar ou apagar</div>
     <div class="list">${listHtml}</div>
   </section></div>
   </div><div class="colB">
@@ -824,7 +826,7 @@ function bind(){
   if($("editClose")) $("editClose").onclick=closeSheet;
   if($("setLimit")) $("setLimit").onclick=cardsSheet;
   $("btnCards").onclick=cardsSheet;
-  $("btnChart").onclick=chartSheet; $("btnChart2").onclick=chartSheet;
+  $("btnChart").onclick=chartSheet; $("btnChart2").onclick=chartSheet; $("btnSearch").onclick=searchSheet;
   $("btnCats").onclick=catsSheet;
   $("btnCfg").onclick=cfgSheet;
   document.querySelectorAll("[data-recon]").forEach(b=>b.onclick=()=>importSheet(b.dataset.recon,b.dataset.rd||V.inv));
@@ -2221,6 +2223,53 @@ function trashShow(rows){
           if(!S.categories.some(c=>c.id===e.cat)) e.cat=S.categories[0].id; if(!S.people.some(p=>p.id===e.who)) e.who=S.currentUser; S.expenses.push(e); k++; }
         save(); render(); closeLayer(); toast(`${k} gastos recuperados`); }; }); };
   draw();
+}
+
+/* pesquisa: acha uma compra pelo nome, categoria, pessoa ou valor — na fatura aberta na tela ou em todos os meses */
+const SRCH={q:"",all:false};
+function searchSheet(){
+  const inv=V.inv, cardSel=V.card;
+  const draw=()=>{
+    sheet(`${head("Procurar compra")}
+      <input id="sq" type="search" placeholder="Nome da loja, categoria, pessoa ou valor" value="${esc(SRCH.q)}" autocomplete="off" enterkeyhint="search" style="width:100%">
+      <span class="seg" role="group" aria-label="Onde procurar"><button data-sa="0" aria-pressed="${!SRCH.all}">Fatura de ${invLabel(inv)}</button><button data-sa="1" aria-pressed="${SRCH.all}">Todos os meses</button></span>
+      ${cardSel!=="all"&&S.cards.length>1?`<span class="small">Só no ${esc(cardOf(cardSel).name)} (o cartão filtrado na tela)</span>`:""}
+      <div id="sres"></div>
+      <div class="btns"><button class="btn" data-close>Fechar</button></div>`,
+    L=>{ const q=L.querySelector("#sq");
+      q.oninput=()=>{ SRCH.q=q.value; results(); };
+      L.querySelectorAll("[data-sa]").forEach(b=>b.onclick=()=>{ SRCH.all=b.dataset.sa==="1"; draw(); });
+      results(); setTimeout(()=>{ try{ q.focus(); q.setSelectionRange(q.value.length,q.value.length); }catch{} },60); });
+  };
+  const results=()=>{
+    const box=document.getElementById("sres"); if(!box) return;
+    const raw=SRCH.q.trim(), n=normTxt(raw); if(!n){ box.innerHTML=`<span class="small">Digite para procurar${SRCH.all?" em todos os meses":` na fatura de ${invLabel(inv)}`}.</span>`; return; }
+    const num=/^\d{1,3}(\.\d{3})*(,\d{1,2})?$|^\d+([.,]\d{1,2})?$/.test(raw) ? parseFloat(raw.replace(/\./g,"").replace(",",".")) : null;
+    const words=n.split(/\s+/).filter(Boolean);
+    const hit=(e,val)=>{ const txt=normTxt([e.title,catOf(e.cat).name,nameOf(e.who),cardOf(e.card).name].join(" "));
+      if(num!=null){ const cents=/[.,]\d{1,2}$/.test(raw); return [e.total,val].some(v=>v!=null && (cents?Math.abs(Math.abs(v)-num)<0.005:Math.floor(Math.abs(v))===Math.floor(num))) || words.every(w=>txt.includes(w)); }
+      return words.every(w=>txt.includes(w)); };
+    const xs=installments().filter(x=>(cardSel==="all"||x.cd.id===cardSel) && (SRCH.all || x.inv===inv));
+    let rows;
+    if(SRCH.all){ const seen=new Map(); for(const x of xs){ if(!hit(x.e,x.value)) continue; if(!seen.has(x.e.id)) seen.set(x.e.id,x); }
+      rows=[...seen.values()].sort((a,b)=>b.e.date.localeCompare(a.e.date)); }
+    else rows=xs.filter(x=>hit(x.e,x.value)).sort((a,b)=>b.e.date.localeCompare(a.e.date));
+    const tot=r2(rows.reduce((a,x)=>a+(SRCH.all&&!x.rec?x.e.total:x.value),0)), more=rows.length>200;
+    box.innerHTML = rows.length ? `<div class="rsum num"><b>${rows.length} ${rows.length===1?"compra":"compras"} · ${money(tot)}</b><span class="small">${SRCH.all?"valor total de cada compra (parceladas inteiras)":`o que cai na fatura de ${invLabel(inv)}`}</span></div>
+      <div class="list">${rows.slice(0,200).map(x=>SRCH.all?searchRow(x):itemRow(x)).join("")}</div>${more?`<span class="small">Mostrando as 200 mais recentes. Digite mais para afinar.</span>`:""}`
+      : `<div class="rsum"><b>Nada encontrado</b><span class="small">${SRCH.all?"Tente outra palavra ou parte do nome.":`Não achei na fatura de ${invLabel(inv)}. Quer procurar em todos os meses?`}</span></div>${SRCH.all?"":`<button class="btn" id="s_all">Procurar em todos os meses</button>`}`;
+    box.querySelectorAll("[data-exp]").forEach(b=>b.onclick=()=>expenseSheet(b.dataset.exp));
+    const sa=document.getElementById("s_all"); if(sa) sa.onclick=()=>{ SRCH.all=true; draw(); };
+  };
+  draw();
+}
+function searchRow(x){ // em "todos os meses": uma linha por compra, com a fatura em que começa
+  const e=x.e, c=catOf(e.cat), multi=S.cards.length>1, first=invoiceFor(x.cd,e.date);
+  return `<button class="it" data-exp="${e.id}">
+    <span class="who" style="background:${colorOf(e.who)}">${esc(nameOf(e.who)[0])}</span>
+    <span class="t"><b>${esc(e.title)}${e.n>1?`<span class="tag num">${e.n}x</span>`:""}${x.rec?`<span class="tag">↻ mensal</span>`:""}${e.total<0?`<span class="tag">estorno</span>`:""}</b>
+    <span>${br(e.date)} · ${x.rec?`todo mês desde ${invShort(first)}`:`fatura de ${invShort(first)}`} · ${esc(c.name)}${multi?` · <span class="cardname"><span class="mini" style="background:${x.cd.color}"></span>${esc(x.cd.name)}</span>`:""}</span></span>
+    <span class="v num">${money(x.rec?x.value:e.total)}</span></button>`;
 }
 
 async function boot(){
