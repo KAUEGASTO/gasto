@@ -2,7 +2,7 @@
 F={}
 F['nubank']=dict(D='2026-10',exp=dict(n=6,total=130.43,due='2026-10',holders=0),lines='''
 Nu Pagamentos S.A. - Instituição de Pagamento
-Olá, Kaue
+Olá, João
 Esta é a sua fatura de outubro, no valor de R$ 130,43
 Data de vencimento: 10 OUT 2026
 Período vigente: 03 SET a 03 OUT
@@ -36,11 +36,11 @@ F['c6']=dict(D='2026-11',exp=dict(n=5,total=412.30,due='2026-11',holders=2),line
 C6 Bank
 Vencimento: 10/11/2026
 Valor da fatura: R$ 229,90
-Transações do cartão C6 Carbon Final 4321 - KAUE MANNES
+Transações do cartão C6 Carbon Final 4321 - JOAO SILVA
 05 out Posto Shell 180,00
 06 out Spotify 21,90
 09 out Ifood *Restaurante - Parcela 1/2 40,00
-Transações do cartão Virtual Final 8765 - KAUE MANNES
+Transações do cartão Virtual Final 8765 - JOAO SILVA
 10 out Apple.com/bill 9,90
 12 out Estorno Spotify -21,90
 Total de transações R$ 229,90
@@ -50,12 +50,12 @@ F['bradesco']=dict(D='2026-11',exp=dict(n=5,total=1330.00,due='2026-11',holders=
 Bradesco Cartões
 Vencimento 10/11/2026
 Total da fatura em real R$ 1.330,00
-KAUE P MANNES Cartão 4551 XXXX XXXX 1122
+JOAO P SILVA Cartão 4551 XXXX XXXX 1122
 Data Histórico Valor
 05/10 MERCADO CONDOR CURITIBA 300,00
 06/10 MAGAZINE LUIZA PARC 03/10 120,00
 07/10 PAGTO. POR DEB EM C/C 2.000,00-
-KAOANNA MANNES Cartão 4551 XXXX XXXX 3344
+MARIA SILVA Cartão 4551 XXXX XXXX 3344
 08/10 RENNER SHOPPING 410,00
 09/10 DROGARIA RAIA 500,00
 '''.replace('2.000,00-','2.000,00-'))
@@ -64,7 +64,7 @@ F['santander']=dict(D='2026-11',exp=dict(n=4,total=640.00,due='2026-11',holders=
 Santander
 Vencimento 10/11/2026
 Total a Pagar R$ 640,00
-KAUE P MANNES - 5412 XXXX XXXX 7788
+JOAO P SILVA - 5412 XXXX XXXX 7788
 Data Descrição Parcela R$ US$
 05/10 LOJAS AMERICANAS 02/05 100,00
 06/10 POSTO IPIRANGA 250,00
