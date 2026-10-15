@@ -1,5 +1,5 @@
-// Gastô 5.20: guarda o app no celular para abrir rápido e funcionar sem internet.
-const C="gasto-5.20";
+// Gastô 5.21: guarda o app no celular para abrir rápido e funcionar sem internet.
+const C="gasto-5.21";
 const SHELL=["./","./index.html","./manifest.json","./icon-192.png","./icon-512.png","./apple-touch-icon.png"];
 self.addEventListener("install",e=>{ e.waitUntil(caches.open(C).then(c=>c.addAll(SHELL))); self.skipWaiting(); });
 self.addEventListener("activate",e=>{ e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k))))); self.clients.claim(); });
