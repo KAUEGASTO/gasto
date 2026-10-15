@@ -398,7 +398,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
   ["gesturestart","gesturechange","gestureend"].forEach(ev=>document.addEventListener(ev,e=>e.preventDefault(),{passive:false}));
   document.addEventListener("touchmove",e=>{if(e.touches&&e.touches.length>1)e.preventDefault()},{passive:false});
 })();
-const APP_VERSION = "5.27";
+const APP_VERSION = "5.29";
 const LOGO_SRC = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJsayIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzM0MzYzZCIvPjxzdG9wIG9mZnNldD0iLjQ1IiBzdG9wLWNvbG9yPSIjMTUxNjFhIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDUwNTA2Ii8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImdvbGQiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmNmUzYTgiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjY2ZhODUwIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOGU2YTI0Ii8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImJnRzEiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9Ii4xMiIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzEyYjVhMiIvPjwvbGluZWFyR3JhZGllbnQ+PGNsaXBQYXRoIGlkPSJpY29DbGlwIj48cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjI4Ii8+PC9jbGlwUGF0aD48L2RlZnM+CiAgICAgIDxnIGNsaXAtcGF0aD0idXJsKCNpY29DbGlwKSI+CiAgICAgIDxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiBmaWxsPSJ1cmwoI2JnRzEpIi8+CiAgICAgIDxwYXRoIGQ9Ik00NSAxNC41IFE2MCA1IDc1IDE0LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdiNWNmZiIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgICAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MyIgcj0iMzciIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdiNWNmZiIgc3Ryb2tlLXdpZHRoPSIxMSIvPgogICAgICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSgtNSA2MCA2MykiPgogICAgICAgIDxyZWN0IHg9IjE0LjUiIHk9IjM0LjUiIHdpZHRoPSI5MSIgaGVpZ2h0PSI1NyIgcng9IjYuOCIgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIuMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS41IDMpIi8+CiAgICAgICAgPHJlY3QgeD0iMTQuNSIgeT0iMzQuNSIgd2lkdGg9IjkxIiBoZWlnaHQ9IjU3IiByeD0iNi44IiBmaWxsPSJ1cmwoI2JsaykiLz4KICAgICAgICA8cmVjdCB4PSIxNS4xIiB5PSIzNS4xIiB3aWR0aD0iODkuOCIgaGVpZ2h0PSI1NS44IiByeD0iNi4zIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMS4xIiBzdHJva2Utb3BhY2l0eT0iLjgiLz4KICAgICAgICA8cGF0aCBkPSJNMTQuNSA2OC43IEw1Mi43IDM0LjUgTDY1LjUgMzQuNSBMMjMuNiA5MS41IEwxNC41IDkxLjUgWiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIuMDYiLz4KICAgICAgICA8cmVjdCB4PSIyMi43IiB5PSI0OS4zIiB3aWR0aD0iMTMuNyIgaGVpZ2h0PSIxMS40IiByeD0iMi4yIiBmaWxsPSJ1cmwoI2dvbGQpIi8+CiAgICAgICAgPGcgZmlsbD0iI2Q5YmY3YSIgZmlsbC1vcGFjaXR5PSIuNyI+PGNpcmNsZSBjeD0iMjMuNiIgY3k9Ijc1LjUiIHI9IjEuNDUiLz48Y2lyY2xlIGN4PSIyNy43IiBjeT0iNzUuNSIgcj0iMS40NSIvPjxjaXJjbGUgY3g9IjMxLjgiIGN5PSI3NS41IiByPSIxLjQ1Ii8+PGNpcmNsZSBjeD0iMzUuOSIgY3k9Ijc1LjUiIHI9IjEuNDUiLz48Y2lyY2xlIGN4PSI0Mi43IiBjeT0iNzUuNSIgcj0iMS40NSIvPjxjaXJjbGUgY3g9IjQ2LjgiIGN5PSI3NS41IiByPSIxLjQ1Ii8+PGNpcmNsZSBjeD0iNTAuOSIgY3k9Ijc1LjUiIHI9IjEuNDUiLz48Y2lyY2xlIGN4PSI1NS4wIiBjeT0iNzUuNSIgcj0iMS40NSIvPjwvZz4KICAgICAgPC9nPgogICAgICA8Y2xpcFBhdGggaWQ9ImdGcm9udE4iPjxyZWN0IHg9IjYwIiB5PSIyNCIgd2lkdGg9IjYwIiBoZWlnaHQ9Ijc4Ii8+PC9jbGlwUGF0aD4KICAgICAgPGcgY2xpcC1wYXRoPSJ1cmwoI2dGcm9udE4pIj48Y2lyY2xlIGN4PSI2MCIgY3k9IjYzIiByPSIzNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2I1Y2ZmIiBzdHJva2Utd2lkdGg9IjExIi8+PC9nPgogICAgICAKICAgICAgPC9nPgogICAgPC9zdmc+";
 const WORDMARK_SRC = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00MCAtOTAgMjc5MiAxMDEwIj4KICA8ZGVmcz48bWFzayBpZD0iY3V0UyIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iLTIwMDAiIHk9Ii0yMDAwIiB3aWR0aD0iOTAwMCIgaGVpZ2h0PSI1MDAwIj48cmVjdCB4PSItMjAwMCIgeT0iLTIwMDAiIHdpZHRoPSI5MDAwIiBoZWlnaHQ9IjUwMDAiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMzc1LjYiIHk9IjM0NSIgd2lkdGg9IjQwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiMwMDAiLz48cmVjdCB4PSIxNDY1LjYiIHk9IjMxOCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiMwMDAiLz48L21hc2s+PGxpbmVhckdyYWRpZW50IGlkPSJ3bUciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCIgeTE9IjU2MCIgeDI9IjE5NTgiIHkyPSI4NjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEyYjVhMiIvPjxzdG9wIG9mZnNldD0iLjU1IiBzdG9wLWNvbG9yPSIjMmY1YmUwIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNWIzZmQ2Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+CiAgPGcgZmlsbD0iI2ZmZmZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCA4NjApIHNjYWxlKDEgLTEpIj48cGF0aCBkPSJNMzA0IC0xNFEyMjAgLTE0IDE1OC4wIDI4LjBROTYgNzAgNjMuMCAxNDYuNVEzMCAyMjMgMzAgMzI1UTMwIDQwMCA0OC41IDQ2My41UTY3IDUyNyAxMDYuMCA1NzQuNVExNDUgNjIyIDIwMy41IDY0OC4wUTI2MiA2NzQgMzQyIDY3NFE0MDggNjc0IDQ1Ny4wIDY1Ni4wUTUwNiA2MzggNTM4LjAgNjA1LjVRNTcwIDU3MyA1ODQuNSA1MjkuMFE1OTkgNDg1IDU5NiA0MzNMNDYwIDQxNlE0NjIgNDYzIDQ0Ny4wIDQ5My4wUTQzMiA1MjMgNDA0LjAgNTM4LjBRMzc2IDU1MyAzMzcgNTUzUTI5MSA1NTMgMjU2LjAgNTI4LjVRMjIxIDUwNCAyMDEuMCA0NTUuMFExODEgNDA2IDE4MSAzMzJRMTgxIDI3NiAxOTIuNSAyMzMuNVEyMDQgMTkxIDIyNi4wIDE2Mi41UTI0OCAxMzQgMjgwLjAgMTE5LjBRMzEyIDEwNCAzNTEgMTA0UTM5MyAxMDQgNDIyLjUgMTE5LjVRNDUyIDEzNSA0NjguMCAxNjMuMFE0ODQgMTkxIDQ4NSAyMjlIMzc1VjMzM0g2MTRWMjE0VjBINTEyTDUxNSAxODFINTA2UTUwMCAxMTggNDc1LjAgNzQuNVE0NTAgMzEgNDA3LjAgOC41UTM2NCAtMTQgMzA0IC0xNFoiLz48cGF0aCBkPSJNODAxLjMgLTE0UTc2MC4zIC0xNCA3MjQuOCAwLjVRNjg5LjMgMTUgNjY2LjggNDYuMFE2NDQuMyA3NyA2NDQuMyAxMjlRNjQ0LjMgMTc3IDY2Mi44IDIwNy41UTY4MS4zIDIzOCA3MTMuMyAyNTYuMFE3NDUuMyAyNzQgNzgzLjMgMjg0LjBRODIxLjMgMjk0IDg2MC4zIDMwMVE5MTMuMyAzMTEgOTM5LjggMzE2LjVROTY2LjMgMzIyIDk3NS4zIDMzMC41UTk4NC4zIDMzOSA5ODQuMyAzNTRROTg0LjMgMzg4IDk2MC4zIDQwNS41UTkzNi4zIDQyMyA4OTcuMyA0MjNRODc0LjMgNDIzIDg1MC4zIDQxNC41UTgyNi4zIDQwNiA4MTAuOCAzODQuMFE3OTUuMyAzNjIgNzk1LjMgMzIzTDY2Ni4zIDMzNFE2NjYuMyAzOTQgNjg2LjggNDMzLjVRNzA3LjMgNDczIDc0Mi4zIDQ5Ni4wUTc3Ny4zIDUxOSA4MTkuMyA1MjkuMFE4NjEuMyA1MzkgOTAyLjMgNTM5UTk3Ni4zIDUzOSAxMDI1LjggNTExLjVRMTA3NS4zIDQ4NCAxMTAwLjMgNDMxLjBRMTEyNS4zIDM3OCAxMTI1LjMgMzAxVjIwNlExMTI1LjMgMTcyIDExMjUuMyAxMzcuNVExMTI1LjMgMTAzIDExMjUuOCA2OC41UTExMjYuMyAzNCAxMTI2LjMgMEg5OTkuM1ExMDAwLjMgMzggMTAwMS4zIDc3LjBRMTAwMi4zIDExNiAxMDAyLjMgMTU4SDk5Ni4zUTk5MS4zIDExMSA5NjUuMyA3Mi4wUTkzOS4zIDMzIDg5Ny4zIDkuNVE4NTUuMyAtMTQgODAxLjMgLTE0Wk04NTcuMyA5M1E4NzcuMyA5MyA4OTkuOCAxMDEuNVE5MjIuMyAxMTAgOTQxLjMgMTI3LjVROTYwLjMgMTQ1IDk3Mi4zIDE3My41UTk4NC4zIDIwMiA5ODQuMyAyNDNMOTg1LjMgMjY2TDEwMTEuMyAyNzFRMTAwMy4zIDI1NyA5ODIuOCAyNDkuMFE5NjIuMyAyNDEgOTM3LjMgMjM2LjVROTEyLjMgMjMyIDg4Ni4zIDIyNy4wUTg2MC4zIDIyMiA4MzguMyAyMTQuMFE4MTYuMyAyMDYgODAyLjggMTkxLjVRNzg5LjMgMTc3IDc4OS4zIDE1MlE3ODkuMyAxMjQgODA4LjMgMTA4LjVRODI3LjMgOTMgODU3LjMgOTNaIi8+PHBhdGggZD0iTTEzOTguNiAtMTRRMTM0Ni42IC0xNCAxMzAyLjEgLTMuNVExMjU3LjYgNyAxMjI1LjEgMzAuMFExMTkyLjYgNTMgMTE3NS42IDkxLjVRMTE1OC42IDEzMCAxMTYxLjYgMTg0TDEyODcuNiAxOTZRMTI4OC42IDE1OSAxMzAyLjYgMTM1LjVRMTMxNi42IDExMiAxMzQyLjEgMTAxLjVRMTM2Ny42IDkxIDE0MDMuNiA5MVExNDQxLjYgOTEgMTQ2Ni42IDEwMy41UTE0OTEuNiAxMTYgMTQ5MS42IDE0NFExNDkxLjYgMTYxIDE0ODEuMSAxNzEuMFExNDcwLjYgMTgxIDE0NDYuNiAxODkuMFExNDIyLjYgMTk3IDEzODEuNiAyMDdRMTMzMy42IDIxOCAxMjkzLjYgMjMwLjVRMTI1My42IDI0MyAxMjI0LjYgMjYwLjVRMTE5NS42IDI3OCAxMTgwLjEgMzA0LjVRMTE2NC42IDMzMSAxMTY0LjYgMzcwUTExNjQuNiA0MjMgMTE5My4xIDQ2MC41UTEyMjEuNiA0OTggMTI3Mi4xIDUxOC41UTEzMjIuNiA1MzkgMTM4OC42IDUzOVExNDQ4LjYgNTM5IDE1MDAuMSA1MjAuMFExNTUxLjYgNTAxIDE1ODEuNiA0NTguNVExNjExLjYgNDE2IDE2MDQuNiAzNDZMMTQ4MC42IDMzNFExNDgzLjYgMzY2IDE0NzEuNiAzODguMFExNDU5LjYgNDEwIDE0MzYuMSA0MjEuNVExNDEyLjYgNDMzIDEzODAuNiA0MzNRMTM0Mi42IDQzMyAxMzIxLjEgNDE4LjVRMTI5OS42IDQwNCAxMjk5LjYgMzgxUTEyOTkuNiAzNjIgMTMxMy4xIDM1MC4wUTEzMjYuNiAzMzggMTM1Mi42IDMzMC41UTEzNzguNiAzMjMgMTQxOC42IDMxNFExNDUyLjYgMzA3IDE0ODkuMSAyOTYuNVExNTI1LjYgMjg2IDE1NTcuMSAyNjguNVExNTg4LjYgMjUxIDE2MDguMSAyMjEuNVExNjI3LjYgMTkyIDE2MjcuNiAxNDZRMTYyNy42IDk4IDE2MDEuMSA2MS41UTE1NzQuNiAyNSAxNTIzLjYgNS41UTE0NzIuNiAtMTQgMTM5OC42IC0xNFoiIG1hc2s9InVybCgjY3V0UykiLz48cGF0aCBkPSJNMTg2Mi44OTk5OTk5OTk5OTk5IC0xMVExNzc1Ljg5OTk5OTk5OTk5OTkgLTExIDE3MzIuMzk5OTk5OTk5OTk5OSAzNC4wUTE2ODguODk5OTk5OTk5OTk5OSA3OSAxNjg4Ljg5OTk5OTk5OTk5OTkgMTczVjQxMUgxNjI5Ljg5OTk5OTk5OTk5OTlWNTA1SDE2MzcuODk5OTk5OTk5OTk5OVExNjkyLjg5OTk5OTk5OTk5OTkgNTExIDE3MTYuMzk5OTk5OTk5OTk5OSA1NDAuNVExNzM5Ljg5OTk5OTk5OTk5OTkgNTcwIDE3NDQuODk5OTk5OTk5OTk5OSA2MzBMMTc0NS44OTk5OTk5OTk5OTk5IDY0M0gxODMxLjg5OTk5OTk5OTk5OTlWNTI1SDE5NTYuODk5OTk5OTk5OTk5OVY0MDhIMTgzMS44OTk5OTk5OTk5OTk5VjE4NlExODMxLjg5OTk5OTk5OTk5OTkgMTQ4IDE4NTAuMzk5OTk5OTk5OTk5OSAxMzEuMFExODY4Ljg5OTk5OTk5OTk5OTkgMTE0IDE4OTYuODk5OTk5OTk5OTk5OSAxMTRRMTkxMS44OTk5OTk5OTk5OTk5IDExNCAxOTI3LjM5OTk5OTk5OTk5OTkgMTE4LjVRMTk0Mi44OTk5OTk5OTk5OTk5IDEyMyAxOTU2Ljg5OTk5OTk5OTk5OTkgMTMxVjNRMTkyNy44OTk5OTk5OTk5OTk5IC01IDE5MDQuODk5OTk5OTk5OTk5OSAtOC4wUTE4ODEuODk5OTk5OTk5OTk5OSAtMTEgMTg2Mi44OTk5OTk5OTk5OTk5IC0xMVoiLz48cGF0aCBkPSJNMTM3My42IDUzOC44IEMxNDc1LjYgNTM4LjggMTU4Ny45IDUwNSAxNjYyLjkgNTA1IEwxNzEyLjkgNTA1IEwxNzEyLjkgNDExLjMgTDE2MzIuOSA0MTEuMyBDMTU3Ny45IDQxMS4zIDE0NjUuNiA0MzIuOSAxMzczLjYgNDMyLjkgWiIvPjwvZz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMDAzLjIgLTEwNS4wKSBzY2FsZSgxNC43NzYxKSB0cmFuc2xhdGUoLTYgLTEyKSI+CiAgICAgIDxwYXRoIGQ9Ik0xOCAyNSBRMzAgMTYgNDIgMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSI2LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgICA8Y2lyY2xlIGN4PSIzMCIgY3k9IjU1IiByPSIxOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjgiLz4KICAgICAgPGNpcmNsZSBjeD0iMzQuNSIgY3k9IjUwLjUiIHI9IjcuMiIgZmlsbD0iIzVjZjBkOCIvPjwvZz4KPC9zdmc+";
 const LS = "cartao-proto-v1";
@@ -1291,7 +1291,7 @@ function renderChart(){
 // Cada compra vira um lançamento: parcelas "3/10" viram compra de 10x já na fatura certa,
 // e o que o app não sabe classificar ele pergunta uma por uma (e aprende para a próxima vez).
 const normTxt=s=>String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
-const PARC_RE=/(?:\s*[-–]?\s*parc(?:ela)?\.?\s*(\d{1,2})\s*(?:\/|de)\s*(\d{1,2}))|(?:\s*(\d{2})\/(\d{2})\s*$)|(?:\s(\d)\/(\d{1,2})\s*$)/i;
+const PARC_RE=/(?:\s*[-–]?\s*\(?parc(?:ela)?s?\.?\s*(\d{1,2})\s*(?:\/|de)\s*(\d{1,2})\)?)|(?:\s*(\d{2})\/(\d{2})\s*$)|(?:\s(\d)\/(\d{1,2})\s*$)|(?:\s*\(\s*(\d{1,2})\s*\/\s*(\d{1,2})\s*\))/i;
 const ACQ_RE=/^(ifd|mp|pag|pg|ec|ebn|pp|sumup|smp|ebanx|paypal|htm|dl|apl|mercpago|pagseguro|stone|cielo)\s?\*\s?/i;
 function merchantKey(desc){
   return normTxt(desc).replace(PARC_RE,"").replace(ACQ_RE,"").replace(/\s*-ct\b/g," ").replace(/[*_\-.,/\\]+/g," ").replace(/\b\d+\b/g," ").replace(/\s+/g," ").trim().split(" ").slice(0,3).join(" ");
@@ -1318,10 +1318,11 @@ const AUTO=[
 ];
 // tipo da linha: compra, juros/tarifa (entra como gasto), estorno/crédito (entra negativo) ou pagamento da fatura (não entra)
 const FEE_RE=/\b(juros|iof|multa|encargo|encargos|anuidade|tarifa|mora|rotativo|parcelamento de fatura|seguro fatura|avaliacao emergencial)\b/;
-const PAYINV_RE=/(pagamento|pagto|pgto|pag)\.?\s*(recebido|efetuado|da fatura|de fatura|fatura|online|via boleto|via pix|debito automatico)|^pagamento$|credito de pagamento|pagamento obrigado/;
+const PAYINV_RE=/(pagamento|pagto|pgto|pag)\.?\s*(recebido|efetuado|da fatura|de fatura|fatura|on ?line|via boleto|via pix|debito automatico|por deb|em \d|com saldo|antecipado)|^pagamento$|credito de pagamento|pagamento obrigado/;
 const REFUND_RE=/estorno|devolucao|reembolso|credito de|ajuste a credito|cashback|chargeback|cancelamento de compra/;
 function kindOf(r){ const n=normTxt(r.desc);
   if(PAYINV_RE.test(n) && (r.credit || !/conta|boleto/.test(n))) return "payinv";
+  if(r.credit && /^(pagamento|pagto|pgto|pagt)\b/.test(n) && !/conta|boleto|estorno/.test(n)) return "payinv";
   if(r.credit || REFUND_RE.test(n)) return "refund";
   if(FEE_RE.test(n)) return "fee";
   return "buy"; }
@@ -1369,49 +1370,86 @@ function parseInvoiceText(txt,D){
   }
   return parseStatement(lines,D);
 }
-// Texto da fatura (PDF lido ou texto colado). Entende:
-//  · "12/10 LOJA X 123,45" e "12 OUT LOJA X R$ 123,45"
-//  · titulares/adicionais: "KAOANNA MANNES (final 7806)" → as compras abaixo são dela
-//  · seções: pula "Compras parceladas - próximas faturas" (são as parcelas futuras, não desta fatura)
-//  · a linha de categoria do banco logo abaixo da compra ("ALIMENTAÇÃO .CURITIBA")
-//  · o total da fatura e o vencimento, para conferir a leitura
+// Texto da fatura (PDF lido ou texto colado) de qualquer banco. Entende:
+//  · datas "12/10", "12.10", "12/10/2026", "12 OUT", "12 out 2026", "12 de out. 2026"
+//  · valores "R$ 1.234,56", "-R$ 10,00", "R$ -10,00", "10,00-", "(10,00)", "10,00 C/CR" (crédito) e "10,00 D"
+//  · titulares/adicionais: "NOME (final 7806)", "Cartão final 1234", "5367 **** **** 1234 NOME"… → as compras abaixo são dessa pessoa
+//  · seções: pula "próximas faturas", "lançamentos futuros", "parcelas a vencer"
+//  · a linha de categoria do banco logo abaixo da compra (Itaú: "ALIMENTAÇÃO .CURITIBA")
+//  · o total da fatura e o vencimento, para conferir a leitura; guarda as linhas que tinham valor e não foram entendidas
 let PARSE_META=null;
+const BANKS=[["Itaú",/\bita[uú]\b|personnalit|uniclass/i],["Nubank",/nubank|\bnu pagamentos/i],["Inter",/banco inter\b|\binter\s*&\s*co|bancointer/i],["C6 Bank",/\bc6\s*bank|\bc6\b/i],
+  ["Bradesco",/bradesco|bradescard/i],["Santander",/santander/i],["Banco do Brasil",/banco do brasil|\bourocard\b/i],["Caixa",/caixa econ[oô]mica|\bcaixa\b/i],["XP",/\bxp\s*(investimentos|visa|cart)/i],
+  ["BTG",/\bbtg\b/i],["Mercado Pago",/mercado\s*pago/i],["PicPay",/picpay/i],["Neon",/\bneon\b/i],["Next",/\bnext\b/i],["Sicredi",/sicredi/i],["Sicoob",/sicoob/i],["Porto",/porto\s*(seguro|bank)/i],["Original",/banco original/i],["Will Bank",/will\s*bank/i],["Pan",/banco pan\b/i]];
 function parseStatement(lines,D){
-  const out=[], meta={due:null,bankTotal:null,holders:[],holderTotals:{}}; let holder=null, skip=false, titular=null, last=null;
-  const holderOf=(name,final)=>{ let h=meta.holders.find(x=>x.final===final); if(!h){ h={name:name.replace(/\s+/g," ").trim(),final}; meta.holders.push(h); } return h; };
-  const money_=/(-\s*)?(?:R\$\s*)?([\d.]+,\d{2})\s*(-)?(?:\s+[A-Za-zÀ-ú]{1,2})?$/; // às vezes sobra um pedaço do nome da loja depois do valor ("103,55 L")
-  // se a fatura tem seções ("Lançamentos…") ou titulares, só lê dentro delas (evita pegar boleto e resumo)
-  const marked=lines.some(l=>/^lancamentos|\(final \d{4}\)/.test(normTxt(l))); let started=!marked;
+  const out=[], meta={due:null,bankTotal:null,holders:[],holderTotals:{},unread:[],bank:null}; let holder=null, skip=false, titular=null, last=null, totalRank=9;
+  const all=lines.join("\n"); for(const [nm,re] of BANKS) if(re.test(all)){ meta.bank=nm; break; }
+  const holderOf=(name,final)=>{ let h=meta.holders.find(x=>x.final===final); if(!h){ h={name:name.replace(/\s+/g," ").trim()||`Cartão final ${final}`,final}; meta.holders.push(h); } else if(/^cart[aã]o final/i.test(h.name)&&name.trim()) h.name=name.replace(/\s+/g," ").trim(); return h; };
+  const cdStyle=lines.filter(l=>/\d,\d{2}\s+D$/.test(l.trim())).length>=3; // bancos que marcam débito/crédito com D e C no fim
+  // valor no fim da linha; às vezes sobra um pedaço do nome da loja depois do valor ("103,55 L")
+  const money_=/(?:^|\s)([-+−]\s*)?(?:R\$|BRL)?\s*([-+−]\s*)?(\(?)([\d.]+,\d{2})(\)?)\s*(-|\+|CR|C|D)?(?:\s*BRL)?(?:\s+[A-Za-zÀ-ú]{1,2})?$/;
+  const monthOf=s=>MESP[normTxt(s).slice(0,3)];
+  const setTotal=(v,rank)=>{ if(v!=null && rank<totalRank){ meta.bankTotal=v; totalRank=rank; } };
+  // se a fatura tem seções ("Lançamentos…") ou titulares no estilo Itaú, só lê dentro delas (evita pegar boleto e resumo)
+  const marked=lines.some(l=>/^lancamentos:? ?(compras|produtos|nacionais|internacionais|no cartao)|\(final \d{4}\)/.test(normTxt(l))); let started=!marked;
+  const cardMask=/(?:\b|^)(?:\d{4}|[x*•]{4})[\s.-]*(?:[x*•]{2,4}[\s.-]*){1,2}[x*•]{0,4}[\s.-]*(\d{4})\b/i, cardFin=/(?:final|terminad[oa] em|cart[aã]o\s*(?:n[º°o.]*\s*)?)\s*:?\s*(?:[x*•.]+\s*)?(\d{4})\b/i;
+  const cardNo={exec:l=>cardMask.exec(l)||cardFin.exec(l), test:l=>cardMask.test(l)||cardFin.test(l)};
   for(let k=0;k<lines.length;k++){ const l=lines[k].replace(/\s+/g," ").trim(), n=normTxt(l); let m;
     if(!l) continue;
-    if(!meta.due && (m=/vencimento:?\s*(?:em\s*)?(\d{2})\/(\d{2})\/(\d{4})/i.exec(l))) meta.due=`${m[3]}-${m[2]}`;
-    if(!titular && (m=/^titular\s+(.+)$/i.exec(l))) titular=m[1].trim();
+    // vencimento
+    if(!meta.due){
+      if((m=/venc(?:imento|e em)?[^\d]{0,25}(\d{2})\/(\d{2})\/(\d{2,4})/i.exec(l))) meta.due=`${m[3].length===2?"20"+m[3]:m[3]}-${m[2]}`;
+      else if((m=/venc(?:imento|e em)?[^\d]{0,25}(\d{1,2})\s*(?:de\s*)?([a-zç]{3})[a-zç]*\.?\s*(?:de\s*)?(\d{4})/i.exec(l)) && monthOf(m[2])) meta.due=`${m[3]}-${pad(monthOf(m[2]))}`; }
+    if(!titular && (m=/^titular:?\s+([A-Za-zÀ-ú' .]{3,})$/i.exec(l))) titular=m[1].trim();
     if(!meta.nextClose && (m=/pr[oó]x(?:imo|\.)?\s*fechamento:?\s*(\d{2})\/(\d{2})\/(\d{4})/i.exec(l))) meta.nextClose=`${m[3]}-${m[2]}-${m[1]}`;
-    if((m=/total desta fatura\s*:?\s*(?:R\$\s*)?([\d.]+,\d{2})/i.exec(l))) meta.bankTotal=parseMoneyBR(m[1]);
-    else if(meta.bankTotal==null && (m=/total dos lancamentos atuais\s*([\d.]+,\d{2})/.exec(n))) meta.bankTotal=parseMoneyBR(m[1]);
-    // encargos do rotativo (aparecem só no resumo) e IOF das compras internacionais (linha sem data)
+    // total da fatura (o mais específico ganha)
+    { const T=[[/total desta fatura\s*:?\s*(?:R\$\s*)?([\d.]+,\d{2})/i,0],[/total dos lancamentos atuais\s*([\d.]+,\d{2})/,1],[/^(?:o )?(?:valor )?total da (?:sua )?fatura(?: atual| em reais| em real)?\s*(?:e|:)?\s*:?\s*(?:r\$\s*)?([\d.]+,\d{2})/,2],
+        [/^total a pagar\s*:?\s*(?:r\$\s*)?([\d.]+,\d{2})/,3],[/^valor (?:total )?da fatura\s*:?\s*(?:r\$\s*)?([\d.]+,\d{2})/,3],[/fatura[^.]{0,40}no valor de\s*r\$\s*([\d.]+,\d{2})/,4],[/^total da fatura\b/,5]];
+      for(const [re,rank] of T){ const mm=re.exec(rank===0?l:n); if(mm){ let v=mm[1]?parseMoneyBR(mm[1]):null;
+        if(v==null){ const nx=(lines[k+1]||"").trim(); const mv2=/^(?:R\$\s*)?([\d.]+,\d{2})$/.exec(nx); if(mv2) v=parseMoneyBR(mv2[1]); }
+        setTotal(v,rank); break; } } }
+    // encargos do rotativo (aparecem só no resumo) e IOF das compras internacionais (linha sem data) — Itaú
     if((m=/encargos \(financiamento[^)]*\)\s*([\d.]+,\d{2})/.exec(n))){ const v=parseMoneyBR(m[1]); if(v>0) out.push({date:`${D}-01`,desc:"Juros do rotativo (encargos)",value:v,credit:false,holder:"titular",bcat:""}); continue; }
     if((m=/^repasse de iof em r\$\s*([\d.]+,\d{2})/.exec(n))){ const v=parseMoneyBR(m[1]); if(v>0) out.push({date:(last&&last.date)||(out.length?out[out.length-1].date:`${D}-01`),desc:"IOF compra internacional",value:v,credit:false,holder:holder?holder.final:null}); last=null; continue; }
-    if(/^(compras parceladas|parcelas? (futuras|a vencer))|proximas faturas$/.test(n)){ skip=true; last=null; continue; }
+    if(/^(compras parceladas|parcelas? (futuras|a vencer)|lancamentos futuros|proximos lancamentos|parcelamentos? (futuros|a vencer)|compras parceladas a vencer)|proximas faturas:?$/.test(n)){ skip=true; last=null; continue; }
     if(/^lancamentos:? ?(compras|produtos|nacionais|internacionais)|^outros lancamentos|^lancamentos produtos/.test(n) && !money_.test(l)){
       skip=false; started=true; if(/produtos|outros/.test(n)) holder=holderOf(titular||"Titular","titular"); last=null; continue; }
+    if(/^(transacoes|lancamentos|movimentacoes|despesas|compras e saques|detalhamento da fatura|extrato da fatura)\b/.test(n) && !money_.test(l) && !/futur|proxim|a vencer/.test(n) && (marked || !cardNo.test(l))){ skip=false; started=true; last=null; continue; }
     if((m=/^lancamentos no cartao \(final (\d{4})\)\s*([\d.]+,\d{2})/.exec(n))){ meta.holderTotals[m[1]]=parseMoneyBR(m[2]); last=null; continue; }
     if((m=/^([A-Za-zÀ-ú' .]+?)\s*\((?:cart[aã]o\s*)?final:?\s*(\d{4})\)\s*$/.exec(l))){ holder=holderOf(m[1],m[2]); skip=false; started=true; last=null; continue; }
+    // total por cartão: "Total do cartão final 1234 R$ 850,00"
+    if((m=/^(?:sub)?total\b(?=.*(?:final|cart|[x*•]{3})).*?(\d{4})\s*\)?\s*(?:r\$\s*)?([\d.]+,\d{2})\s*$/.exec(n))){ meta.holderTotals[m[1]]=parseMoneyBR(m[2]); last=null; continue; }
+    // cabeçalho de cartão (titular/adicional) sem valor na linha
+    if(!marked && !/^\d{1,2}\s*([\/.]|de\s|[a-z]{3}\b)/i.test(l) && !money_.test(l) && (m=cardNo.exec(l)) && l.length<90){
+      const fin=m[1]; const seg=l.split(/\s[-–|]\s/).filter(x=>!/\d/.test(x) && /[A-Za-zÀ-ú]{3}/.test(x)), base=seg.length&&l.includes(" - ")?seg[seg.length-1]:l;
+      let name=base.replace(cardMask," ").replace(cardFin," ").replace(/\b(transa[cç][oõ]es|lan[cç]amentos|compras|do|da|de|dos|das|no|na)\b/gi," ").replace(/\b(cart[aã]o|cartao|final|adicional|titular|virtual|f[ií]sico|cr[eé]dito|visa|mastercard|master|elo|amex|hipercard|black|platinum|gold|infinite|signature|nanquim|ultravioleta|internacional|n[º°o]\.?)\b/gi," ").replace(/[^A-Za-zÀ-ú' ]+/g," ").replace(/\s+/g," ").trim();
+      if(name.split(" ").filter(w=>w.length>1).length<1) name=""; if(name.length>40) name=name.slice(0,40);
+      holder=holderOf(name||(/adicional/i.test(l)?"":titular||""),fin); skip=false; started=true; last=null; continue; }
     if(skip||!started) continue;
     // linha de categoria do banco, logo abaixo da compra
     if(last && (m=/^([A-ZÀ-Ú][A-ZÀ-Ú ]{2,}?)\s*\.\s*[\wÀ-ú ]*$/.exec(l))){ last.bcat=m[1].trim(); last=null; continue; }
-    let date=null, desc, mv;
-    if((m=/^(\d{1,2})[\/.](\d{1,2})(?:[\/.](\d{2,4}))?\s+(.+)$/.exec(l)) && (mv=money_.exec(m[4]))){ date=fixYear(+m[1],+m[2],m[3],D); desc=m[4].slice(0,mv.index).trim(); }
-    else if((m=/^(\d{1,2})\s+([a-zç]{3})\.?\s+(.+)$/i.exec(l)) && MESP[normTxt(m[2])] && (mv=money_.exec(m[3]))){ date=fixYear(+m[1],MESP[normTxt(m[2])],null,D); desc=m[3].slice(0,mv.index).trim(); }
-    if(!date||!desc){ last=null; continue; }
-    if(/^(total|subtotal|saldo|pagamento minimo|valor )/.test(normTxt(desc))){ last=null; continue; }
-    const v=parseMoneyBR(mv[2]); if(v===null){ last=null; continue; }
-    const neg=!!(mv[1]||mv[3]);
-    last={date,desc,value:Math.abs(v),credit:neg,holder:holder?holder.final:null}; out.push(last);
+    let date=null, desc, mv, rest;
+    if((m=/^(\d{1,2})[\/.](\d{1,2})(?:[\/.](\d{2,4}))?\s+(.+)$/.exec(l))){ date=fixYear(+m[1],+m[2],m[3],D); rest=m[4]; }
+    else if((m=/^(\d{1,2})\s*(?:de\s+)?([a-zç]{3,9})\.?(?:\s*(?:de\s+)?(\d{4}))?\s+(.+)$/i.exec(l)) && monthOf(m[2]) && normTxt(m[2]).length<=9 && (normTxt(m[2]).length===3||/^(janeiro|fevereiro|marco|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)$/.test(normTxt(m[2])))){ date=fixYear(+m[1],monthOf(m[2]),m[3],D); rest=m[4]; }
+    else if((m=/^(\d{1,2})\/([a-zç]{3})\.?\s+(.+)$/i.exec(l)) && monthOf(m[2])){ date=fixYear(+m[1],monthOf(m[2]),null,D); rest=m[3]; }
+    if(date && (mv=money_.exec(rest))) desc=rest.slice(0,mv.index).replace(/\s*(?:R\$|US\$|USD|EUR|€)\s*[-+]?\s*[\d.]+,\d{2}\s*$/i,"").replace(/\s*[-–]\s*$/,"").replace(/^(?:R\$|US\$|USD|BRL)$/i,"").trim();
+    if(!date||!desc){ if(started && !skip && /\d,\d{2}/.test(l) && /^\d{1,2}\s*([\/.]|de\s|[a-z]{3}\b)/i.test(l) && meta.unread.length<40) meta.unread.push(l); last=null; continue; }
+    if(/^(total|subtotal|saldo|pagamento minimo|valor |limite|encargos financeiros|cet\b)/.test(normTxt(desc))){ last=null; continue; }
+    const v=parseMoneyBR(mv[4]); if(v===null){ last=null; continue; }
+    const mark=mv[6]||"", minus=/[-−]/.test(mv[1]||"")||/[-−]/.test(mv[2]||"")||mark==="-"||(mv[3]==="("&&mv[5]===")"), plus=/\+/.test(mv[1]||"")||/\+/.test(mv[2]||"")||mark==="+";
+    const cr=mark==="CR"||(cdStyle&&mark==="C");
+    last={date,desc,value:Math.abs(v),sgn:minus?-1:plus?1:0,cr,credit:minus||cr,holder:holder?holder.final:null}; out.push(last);
   }
+  // há bancos que mostram as COMPRAS com "-" e os créditos com "+": se a maioria tem "-", inverte
+  const nMinus=out.filter(r=>r.sgn===-1).length; if(out.length>=4 && nMinus>out.length*0.6) for(const r of out) if(r.sgn!=null) r.credit=r.cr||r.sgn!==-1;
+  for(const r of out){ delete r.sgn; delete r.cr; }
   meta.holders=meta.holders.filter(h=>out.some(r=>r.holder===h.final));
-  for(const h of meta.holders){ const rs=out.filter(r=>r.holder===h.final); h.count=rs.length; h.total=r2(rs.reduce((a,r)=>a+(r.credit?-1:1)*r.value,0)); }
-  meta.readTotal=r2(out.reduce((a,r)=>a+(r.credit?-1:1)*r.value,0));
+  if(!meta.holders.some(h=>h.final==="titular") && out.some(r=>!r.holder) && meta.holders.length){ const h=holderOf(titular||"Titular","titular"); for(const r of out) if(!r.holder) r.holder="titular"; }
+  for(const h of meta.holders){ const rs=out.filter(r=>r.holder===h.final && kindOf(r)!=="payinv"); h.count=rs.length; h.total=r2(rs.reduce((a,r)=>a+(r.credit?-1:1)*r.value,0)); }
+  // o total do banco às vezes já desconta o pagamento da fatura anterior, às vezes não: vale o que bater
+  const sum=f=>r2(out.filter(f).reduce((a,r)=>a+(r.credit?-1:1)*r.value,0));
+  const tAll=sum(()=>true), tNoPay=sum(r=>kindOf(r)!=="payinv");
+  meta.readTotal = meta.bankTotal!=null && Math.abs(tNoPay-meta.bankTotal)<0.02 && Math.abs(tAll-meta.bankTotal)>=0.02 ? tNoPay : tAll;
   PARSE_META=meta; return out;
 }
 // ---- PDF: lido aqui mesmo no celular com o pdf.js (nada sai do aparelho) ----
@@ -1566,7 +1604,11 @@ function renderImport(){
   const it=IMP.items, use=it.filter(i=>i.use), need=use.filter(needCat), dup=it.filter(i=>i.dup).length, cred=it.filter(i=>i.credit).length, refs=use.filter(i=>i.kind==="refund"), fees=use.filter(i=>i.kind==="fee");
   const tot=r2(use.reduce((a,i)=>a+i.value,0));
   const catOpts=sel=>`<option value="">Escolher…</option>`+(sel===FEE_CAT?`<option value="${FEE_CAT}" selected>Juros e tarifas (nova)</option>`:"")+S.categories.map(c=>`<option value="${c.id}"${c.id===sel?" selected":""}>${esc(c.name)}</option>`).join("")+`<option value="__new">+ Nova categoria…</option>`;
-  sheet(`${head(`Fatura de ${invLabel(IMP.D)}`)}
+  const RM=IMP.meta, readBox = RM ? (RM.bankTotal!=null
+      ? (Math.abs(RM.readTotal-RM.bankTotal)<0.02 ? `<div class="rsum num"><b>✓ Li a fatura inteira${RM.bank?` (${esc(RM.bank)})`:""}</b><span class="small">Total da fatura ${money(RM.bankTotal)} · lido ${money(RM.readTotal)}</span></div>`
+        : `<div class="resetbox"><span class="small num"><b>Atenção: a leitura não bateu com o total da fatura${RM.bank?` do ${esc(RM.bank)}`:""}.</b> Total ${money(RM.bankTotal)} · lido ${money(RM.readTotal)} · diferença ${money(Math.abs(r2(RM.bankTotal-RM.readTotal)))}. Confira os lançamentos e lance à mão o que faltar.</span>${(RM.unread||[]).length?`<details class="okdet"><summary>${RM.unread.length} linhas com valor que não entendi</summary><div class="small num" style="white-space:pre-wrap">${RM.unread.map(esc).join("\n")}</div></details>`:""}</div>`)
+      : `<div class="resetbox"><span class="small">Não achei o total da fatura${RM.bank?` do ${esc(RM.bank)}`:""} para conferir a leitura. Compare o total abaixo com o da fatura.</span></div>`) : "";
+  sheet(`${head(`Fatura de ${invLabel(IMP.D)}`)}${readBox}
     <div class="incs"><span class="inc info">${use.length} para importar · ${money(tot)}</span>${need.length?`<span class="inc warn">${need.length} sem categoria</span>`:`<span class="inc good">tudo classificado</span>`}${dup?`<span class="inc neutral">${dup} já estavam no app</span>`:""}${fees.length?`<span class="inc warn">${fees.length} juros/tarifas · ${money(r2(fees.reduce((a,i)=>a+i.value,0)))}</span>`:""}${refs.length?`<span class="inc good">${refs.length} ${refs.length===1?"estorno":"estornos"} · −${money(Math.abs(r2(refs.reduce((a,i)=>a+i.value,0))))}</span>`:""}${cred?`<span class="inc neutral">${cred} pagamento da fatura anterior (não é gasto)</span>`:""}${skipChip()}</div>
     ${need.length?`<button class="btn pri" id="i_ask">Classificar as ${need.length} que faltam, uma por uma</button>`:""}
     <div class="implist">${it.map((i,k)=>i.skipH?"":`<div class="impr${i.use?"":" off"}">
@@ -1657,7 +1699,7 @@ function renderRecon(){
 function buildImportItems(rows){
   const cd=cardOf(IMP.card);
   return rows.map(r=>{
-    const pm=PARC_RE.exec(r.desc); let i=1,n=1; if(pm){ i=+(pm[1]||pm[3]||pm[5]); n=+(pm[2]||pm[4]||pm[6]); if(!(n>=2&&n<=48&&i>=1&&i<=n)){i=1;n=1} }
+    const pm=PARC_RE.exec(r.desc); let i=1,n=1; if(pm){ i=+(pm[1]||pm[3]||pm[5]||pm[7]); n=+(pm[2]||pm[4]||pm[6]||pm[8]); if(!(n>=2&&n<=48&&i>=1&&i<=n)){i=1;n=1} }
     const kind=kindOf(r); if(kind!=="buy"){i=1;n=1}
     const key=merchantKey(r.desc.replace(STRIP_REF,"")), title=niceTitle(r.desc);
     const isFee = kind==="fee" || (kind==="refund" && FEE_RE.test(normTxt(r.desc)));
@@ -1788,6 +1830,7 @@ function cfgSheet(){
     <p class="small" style="margin:0">Fechamento, vencimento e limite ficam em cada cartão, no ícone de cartão no topo.</p>
     <div class="btns"><button class="btn" data-close>Cancelar</button><button class="btn pri" id="s_save">Salvar</button></div>
     <button class="btn" id="s_bkp">Backup dos dados (exportar / restaurar)</button>
+    <button class="btn" id="s_trash">Recuperar gastos apagados</button>
     ${CLOUD.on?`<button class="btn" id="s_out">Sair da conta</button>`:`<button class="btn dan" id="s_reset">Recomeçar protótipo com exemplos</button>`}
     <p class="small" style="margin:0;text-align:center">Versão ${APP_VERSION}</p>`,
   L=>{
@@ -1809,6 +1852,7 @@ function cfgSheet(){
     $("s_imp").onclick=()=>{commit();save();importSheet()};
     $("s_zero").onclick=()=>{commit();save();resetSheet("all",addYM(openInvoice(cardOf(S.mainCard)),-1),()=>cfgSheet())};
     $("s_bkp").onclick=()=>{commit();save();backupSheet()};
+    $("s_trash").onclick=()=>{commit();save();trashSheet()};
     if($("s_out")) $("s_out").onclick=()=>confirmSheet("Sair da conta?","Os dados continuam salvos na nuvem. Para voltar, entre de novo com seu e-mail.","Sair",cloudLogout);
     const appUrl=location.origin+location.pathname.replace(/index\.html$/,"");
     const shareIt=async(text)=>{ try{ if(navigator.share){ await navigator.share({title:"Gastô",text,url:appUrl}); return; } }catch(e){ if(e&&e.name==="AbortError") return; }
@@ -2115,6 +2159,41 @@ function loteSheet(o,cardId){
   draw();
 }
 function loteFromText(txt,cardId){ let o; try{ o=JSON.parse(txt); }catch{ return false; } if(!o||o.app!=="gasto-lote"||!Array.isArray(o.invoices)) return false; loteSheet(o,cardId); return true; }
+
+/* lixeira: gastos apagados ficam guardados na nuvem (marcados como apagados) e podem voltar */
+async function trashFetch(){ const out=[]; const since=new Date(Date.now()-30*864e5).toISOString();
+  for(let from=0;;from+=1000){ const {data,error}=await CLOUD.sb.from("items").select("id,data,updated_at").eq("family_id",CLOUD.fam.id).eq("kind","expense").eq("deleted",true).gte("updated_at",since).order("updated_at",{ascending:false}).range(from,from+999);
+    if(error) throw error; out.push(...data); if(data.length<1000) break; } return out; }
+async function trashSheet(){
+  if(!CLOUD.on){ sheet(`${head("Recuperar gastos apagados")}<p class="small" style="margin:0">Só funciona no app com login (os apagados ficam guardados na nuvem).</p><div class="btns"><button class="btn" data-close>Fechar</button></div>`); return; }
+  sheet(`${head("Recuperar gastos apagados")}<p class="small" style="margin:0">Buscando na nuvem…</p>`);
+  let rows; try{ rows=await trashFetch(); }catch(e){ return sheet(`${head("Recuperar gastos apagados")}<p class="small" style="margin:0">Não consegui buscar agora (${esc(e.message||"sem internet")}). Tente de novo com internet.</p><div class="btns"><button class="btn" data-close>Fechar</button></div>`); }
+  trashShow(rows);
+}
+function trashShow(rows){
+  const have=new Set(S.expenses.map(e=>e.id)), same=e=>S.expenses.some(x=>x.card===e.card&&x.title===e.title&&x.n===e.n&&Math.abs(x.total-e.total)<0.005&&x.date===e.date);
+  const G={};
+  for(const r of rows){ const e=r.data; if(!e||have.has(r.id)||!S.cards.some(c=>c.id===e.card)) continue; e.id=r.id;
+    const cd=cardOf(e.card), D=invoiceFor(cd,e.date), k=cd.id+"|"+D;
+    (G[k]=G[k]||{cd,D,items:[],dup:0,when:r.updated_at}).items.push(e); if(same(e)) G[k].dup++; if(r.updated_at>G[k].when) G[k].when=r.updated_at; }
+  const gs=Object.values(G).sort((a,b)=>a.cd.name<b.cd.name?-1:a.cd.name>b.cd.name?1:a.D<b.D?1:-1), pick={};
+  const draw=()=>{ const sel=gs.filter((g,j)=>pick[j]), n=sel.reduce((a,g)=>a+g.items.length-g.dup,0);
+    sheet(`${head("Recuperar gastos apagados")}
+      <p class="small" style="margin:0">Gastos apagados nos últimos 30 dias, por cartão e fatura (pela data da compra). Marque só o que quer de volta. O que já está no app de novo (igual) não volta em dobro.</p>
+      ${gs.length?`<div class="implist">${gs.map((g,j)=>{ const live=g.items.length-g.dup, tot=r2(g.items.reduce((a,e)=>a+e.total,0)), w=new Date(g.when);
+        return `<div class="impr${pick[j]?"":" off"}"><label class="impck"><input type="checkbox" data-tp="${j}" ${pick[j]?"checked":""} ${live?"":"disabled"}></label>
+        <div class="impt"><b>${esc(g.cd.name)} · compras da fatura de ${invLabel(g.D)}</b><span class="num">${g.items.length} gastos · ${money(tot)}</span>
+        <span class="small">${g.dup?`${g.dup} já estão no app de novo · `:""}apagado em ${pad(w.getDate())}/${pad(w.getMonth()+1)} às ${pad(w.getHours())}:${pad(w.getMinutes())}</span>
+        ${pick[j]?`<span class="small">${g.items.slice(0,6).map(e=>esc(e.title)).join(", ")}${g.items.length>6?"…":""}</span>`:""}</div></div>`; }).join("")}</div>`
+      :`<div class="rsum"><b>Nada para recuperar</b><span class="small">Não há gastos apagados nos últimos 30 dias.</span></div>`}
+      <div class="btns"><button class="btn" data-close>Fechar</button><button class="btn pri" id="t_ok" ${n?"":"disabled"}>Recuperar ${n||""}</button></div>`,
+    L=>{ L.querySelectorAll("[data-tp]").forEach(b=>b.onchange=()=>{ pick[+b.dataset.tp]=b.checked; keepScroll(draw); });
+      const ok=document.getElementById("t_ok"); if(ok) ok.onclick=()=>{ let k=0;
+        for(const g of sel) for(const e of g.items){ if(S.expenses.some(x=>x.id===e.id)||same(e)) continue;
+          if(!S.categories.some(c=>c.id===e.cat)) e.cat=S.categories[0].id; if(!S.people.some(p=>p.id===e.who)) e.who=S.currentUser; S.expenses.push(e); k++; }
+        save(); render(); closeLayer(); toast(`${k} gastos recuperados`); }; }); };
+  draw();
+}
 
 async function boot(){
   if(!CLOUD_CFG.url || !CLOUD_CFG.key || !window.supabase){ render(); return; }
