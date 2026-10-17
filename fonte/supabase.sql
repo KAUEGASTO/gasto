@@ -119,3 +119,22 @@ begin
     alter publication supabase_realtime add table public.items;
   end if;
 end $$;
+
+-- ---------------------------------------------------------------------
+-- Lembretes de gasto (notificação às 13:30 e 21:00)
+-- Cada celular que ativa os lembretes guarda aqui o "endereço" de notificação.
+-- ---------------------------------------------------------------------
+create table if not exists public.push_subs (
+  endpoint    text primary key,
+  user_id     uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  family_id   uuid not null references public.families(id) on delete cascade,
+  sub         jsonb not null,
+  created_at  timestamptz not null default now()
+);
+grant select, insert, update, delete on public.push_subs to authenticated;
+revoke all on public.push_subs from anon;
+alter table public.push_subs enable row level security;
+drop policy if exists push_own on public.push_subs;
+create policy push_own on public.push_subs for all
+  using (user_id = auth.uid())
+  with check (user_id = auth.uid() and public.is_member(family_id));
