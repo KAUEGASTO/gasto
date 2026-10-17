@@ -26,5 +26,23 @@
    "type": "image/png",
    "purpose": "maskable"
   }
+ ],
+ "share_target": {
+  "action": "./",
+  "method": "GET",
+  "params": {
+   "title": "title",
+   "text": "text"
+  }
+ },
+ "shortcuts": [
+  {
+   "name": "Novo gasto",
+   "url": "./#novo"
+  },
+  {
+   "name": "Lançar pelo SMS",
+   "url": "./#sms"
+  }
  ]
 }

@@ -53,7 +53,9 @@ open(os.path.join(OUT,'index.html'),'w',encoding='utf-8').write(head+body_part.r
 man={"name":"Gastô","short_name":"Gastô","description":"Controle dos gastos do cartão de crédito da família","lang":"pt-BR",
  "start_url":"./","scope":"./","display":"standalone","orientation":"portrait","background_color":"#f3f4f8","theme_color":"#2f5be0",
  "icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png"},{"src":"icon-512.png","sizes":"512x512","type":"image/png"},
-          {"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]}
+          {"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}],
+ "share_target":{"action":"./","method":"GET","params":{"title":"title","text":"text"}},
+ "shortcuts":[{"name":"Novo gasto","url":"./#novo"},{"name":"Lançar pelo SMS","url":"./#sms"}]}
 open(os.path.join(OUT,'manifest.json'),'w').write(json.dumps(man,ensure_ascii=False,indent=1))
 im=Image.open(os.path.join(ROOT,'icone-1024.png')).convert('RGB')
 shutil.copy(os.path.join(ROOT,'og-image.png'),os.path.join(OUT,'og-image.png'))
